@@ -1,0 +1,295 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOGEX 22, 17, 167, 63
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 9, "System", 0, 0, 0x0
+BEGIN
+    LTEXT           "Dynamic Model of Silicon Porous Formations",IDC_STATIC,5,10,157,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2004 - 2007",IDC_STATIC,5,31,157,8,SS_CENTERIMAGE
+    DEFPUSHBUTTON   "Close",IDCLOSE,123,47,39,11,WS_GROUP
+    LTEXT           "Version",IDC_VERSION,5,21,26,8
+    LTEXT           "2.0 alpha",IDC_VERSION_NUM,38,21,124,8
+END
+
+IDD_PARAMS DIALOGEX 0, 0, 368, 219
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Setup"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Size (X*Y - surface, Z - deep):",IDC_STATIC,8,12,98,8
+    LTEXT           "x",IDC_STATIC,168,13,8,8
+    EDITTEXT        IDC_X,176,9,45,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "y",IDC_STATIC,231,13,8,8
+    EDITTEXT        IDC_Y,240,9,42,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "z",IDC_STATIC,289,13,8,8
+    EDITTEXT        IDC_Z,297,9,46,14,ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "Surface",IDC_STATIC,7,32,353,68
+    GROUPBOX        "Времена жизни клеток",IDC_STATIC,16,44,339,33
+    LTEXT           "Без адс. молекулы:",IDC_STATIC,24,60,67,8
+    EDITTEXT        IDC_TIME1,91,57,19,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,109,57,10,14,WS_EX_STATICEDGE
+    LTEXT           "С адс. молекулой:",IDC_STATIC,127,59,63,8
+    EDITTEXT        IDC_TIME2,191,56,18,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SPIN2,"msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,208,56,10,14,WS_EX_STATICEDGE
+    LTEXT           "С адс. заряж. молекулой:",IDC_STATIC,229,59,88,8
+    EDITTEXT        IDC_TIME3,319,56,18,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SPIN3,"msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,336,56,10,14,WS_EX_STATICEDGE
+    LTEXT           "Oxidize probability:",IDC_STATIC,17,84,62,8
+    EDITTEXT        IDC_OXID_PROB,92,81,40,14,ES_AUTOHSCROLL
+    GROUPBOX        "Parameters",IDC_STATIC,7,110,353,83
+    LTEXT           "Уровень не ветвления:",IDC_STATIC,16,123,84,8
+    EDITTEXT        IDC_DEG,190,121,90,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN4,"msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,279,121,11,14,WS_EX_STATICEDGE
+    LTEXT           "Модификатор вероятности отклонения всторону:",IDC_STATIC,16,145,174,10
+    EDITTEXT        IDC_SIDEWAY,190,143,99,14,ES_AUTOHSCROLL
+    LTEXT           "Диапазон вероятности возникновения поры:",IDC_STATIC,17,166,154,8
+    LTEXT           "мин",IDC_STATIC,176,168,13,8
+    EDITTEXT        IDC_MIN_PROB,190,164,38,14,ES_AUTOHSCROLL
+    LTEXT           "макс",IDC_STATIC,232,168,16,8
+    EDITTEXT        IDC_MAX_PROB,251,165,39,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Apply",IDOK,251,198,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,310,198,50,14
+END
+
+IDD_PARAMS2 DIALOGEX 0, 0, 368, 174
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Setup"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Size (X*Y - surface, Z - height):",IDC_STATIC,8,12,108,8
+    LTEXT           "x",IDC_STATIC,168,13,8,8
+    EDITTEXT        IDC_X,176,9,45,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "y",IDC_STATIC,231,13,8,8
+    EDITTEXT        IDC_Y,240,9,42,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "z",IDC_STATIC,289,13,8,8
+    EDITTEXT        IDC_Z,297,9,46,14,ES_AUTOHSCROLL | ES_NUMBER
+
+    GROUPBOX        "Surface",IDC_STATIC,7,32,353,68
+    GROUPBOX        "Cell life times",IDC_STATIC,16,44,339,33
+    LTEXT           "Without molecule:",IDC_STATIC,24,60,67,8
+    EDITTEXT        IDC_TIME1,91,57,19,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,109,57,10,14,WS_EX_STATICEDGE
+    LTEXT           "With molecule:",IDC_STATIC,127,59,63,8
+    EDITTEXT        IDC_TIME2,191,56,18,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SPIN2,"msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,208,56,10,14,WS_EX_STATICEDGE
+    LTEXT           "With charged molecule:",IDC_STATIC,229,59,88,8
+    EDITTEXT        IDC_TIME3,319,56,18,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SPIN3,"msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,336,56,10,14,WS_EX_STATICEDGE
+    LTEXT           "Oxidize probability:",IDC_STATIC,17,84,62,8
+    EDITTEXT        IDC_OXID_PROB,91,81,40,14,ES_AUTOHSCROLL
+
+    GROUPBOX        "Parameters",IDC_STATIC,7,110,353,39
+    LTEXT           "&Voltage:",IDC_STATIC,16,124,30,10
+    EDITTEXT        IDC_TENSION,50,122,40,14,ES_AUTOHSCROLL
+    AUTOCHECKBOX    "E&xponential probability", chx1, 100, 122, 85, 14, WS_TABSTOP
+    AUTOCHECKBOX    "Use &ftor", chx2, 195, 122, 40, 14, WS_TABSTOP
+
+    DEFPUSHBUTTON   "Apply",IDOK,251,153,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,310,153,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_CELLULAR            ICON                    "Cellular.ico"
+IDI_SMALL               ICON                    "small.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_CELLULAR MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Save",                       IDM_SAVE
+        MENUITEM "&Load",                       IDM_LOAD
+        MENUITEM "Save z-&distribution",        IDM_SAVE_DISTR
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&1. Surface",                 IDM_VIEW_SURFACE
+        MENUITEM "&2. Horizontal slit",         IDM_VIEW_HORZ_SLIT
+        MENUITEM "&3. Vertical slit",           IDM_VIEW_VERT_SLIT
+        MENUITEM "&4. 3D - Mode",               IDM_VIEW_3D
+        MENUITEM "&5. 3D - OpenGL Mode",        IDM_VIEW_3D_OPENGL
+        MENUITEM "&6. Fractal Dimension",       IDM_VIEW_DIMENSION
+        MENUITEM "&7. Correlation Dimension",   IDM_VIEW_CORRELATION
+        MENUITEM "&8. Mass Fractal Dimension",  IDM_VIEW_MASS_DIM
+        MENUITEM "&9. Voltage-current characteristic", IDM_VIEW_VAH
+        MENUITEM "&0. Distributions",           IDM_VIEW_DISTR
+        MENUITEM SEPARATOR
+        POPUP "Electromagnetic &field"
+        BEGIN
+            MENUITEM "1. No field",                 IDM_VIEW_NO_FIELD
+            MENUITEM "2. Show &overall field",      IDM_VIEW_OVERALL_FIELD
+            MENUITEM "3. Show &pore field",         IDM_VIEW_PORE_FIELD
+            MENUITEM "4. Split field on &two components", IDM_VIEW_TWO_COMPONENTS
+        END
+        MENUITEM "Show o&xid",                  IDM_VIEW_SHOW_OXID
+        MENUITEM "Tr&ansparency",               IDM_VIEW_TRANSPARENT
+        MENUITEM "Show pore &tips",             IDM_VIEW_SHOW_TIPS
+        MENUITEM "Show &holes",                 IDM_VIEW_SHOW_PATH
+        MENUITEM "Show F&tor",                  IDM_VIEW_SHOW_FTOR
+        MENUITEM "Show &equipotential curves",  IDM_VIEW_SHOW_EQU_CURVES
+        MENUITEM SEPARATOR
+        MENUITEM "Auto &rotation",              IDM_VIEW_AUTO_ROTATION
+        MENUITEM "Show &bounds",                IDM_VIEW_SHOW_BOUNDS
+        MENUITEM "Show shado&w",                IDM_VIEW_SHOW_SHADOW
+        MENUITEM SEPARATOR
+        MENUITEM "Change colors",               IDM_VIEW_CHANGE_COLORS
+        MENUITEM SEPARATOR
+        MENUITEM "Reset",                       IDM_RESET
+        MENUITEM "&Pause",                      IDM_PAUSE
+    END
+    MENUITEM "&Setup",                      IDM_PARAMS
+    MENUITEM "&About",                      IDM_ABOUT
+END
+
+IDC_LOCAL_MENU MENU 
+BEGIN
+    MENUITEM "1. &Surface",                 IDM_VIEW_SURFACE
+    MENUITEM "2. &Horizontal slit",         IDM_VIEW_HORZ_SLIT
+    MENUITEM "3. &Vertical slit",           IDM_VIEW_VERT_SLIT
+    MENUITEM "4. &Dimension",               IDM_VIEW_DIMENSION
+    MENUITEM "&Pause",                      IDM_PAUSE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_CELLULAR ACCELERATORS 
+BEGIN
+    VK_F2,          IDM_EXIT,               VIRTKEY, NOINVERT
+    "?",            IDM_ABOUT,              ASCII,  ALT, NOINVERT
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 162
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_PARAMS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 360
+        TOPMARGIN, 9
+        BOTTOMMARGIN, 212
+    END
+
+    IDD_PARAMS2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 360
+        TOPMARGIN, 9
+        BOTTOMMARGIN, 167
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "Cellular"
+    IDC_CELLULAR            "CELLULAR"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

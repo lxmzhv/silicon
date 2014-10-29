@@ -1,0 +1,272 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+#include "version.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOGEX 22, 17, 167, 63
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 9, "System", 0, 0, 0x0
+BEGIN
+    LTEXT           "Dynamic Model of Silicon Porous Formations",IDC_STATIC,5,10,157,8,SS_NOPREFIX
+    LTEXT           "Copyright (c) by Alexei Mozhaev, 2004 - 2010",IDC_STATIC,5,31,157,8,SS_CENTERIMAGE
+    DEFPUSHBUTTON   "Close",IDCLOSE,123,47,39,11,WS_GROUP
+    LTEXT           "Version",IDC_VERSION,5,21,26,8
+    LTEXT           SILICON_VERSION,IDC_VERSION_NUM,38,21,124,8
+END
+
+IDD_PARAMS DIALOGEX 0, 0, 368, 194
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Setup"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Model size (X*Y - surface, Z - height):",IDC_STATIC,8,12,108,8
+    LTEXT           "x",IDC_STATIC,168,13,8,8
+    EDITTEXT        IDC_X,176,9,45,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "y",IDC_STATIC,231,13,8,8
+    EDITTEXT        IDC_Y,240,9,42,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "z",IDC_STATIC,289,13,8,8
+    EDITTEXT        IDC_Z,297,9,46,14,ES_AUTOHSCROLL | ES_NUMBER
+
+    GROUPBOX        "Parameters",IDC_STATIC,7,32,353,50
+    LTEXT           "&Voltage:",IDC_STATIC,16,46,30,10
+    EDITTEXT        IDC_TENSION,46,44,35,14,ES_AUTOHSCROLL
+    LTEXT           "V",IDC_STATIC,82,46,5,10
+
+    LTEXT           "&luminosity:",IDC_STATIC,100,46,40,10
+    EDITTEXT        IDC_LUMINOSITY,140,44,40,14,ES_AUTOHSCROLL
+    LTEXT           "photon/(sec*cm*cm)",IDC_STATIC,181,46,70,10
+
+    LTEXT           "&temperature:",IDC_STATIC,260,46,45,10
+    EDITTEXT        IDC_TEMPERATURE,306,44,30,14,ES_AUTOHSCROLL
+    LTEXT           "C",IDC_STATIC,337,46,5,10
+
+    AUTOCHECKBOX    "Use t&win holes", chx1, 16, 64, 85, 14, WS_TABSTOP
+    AUTOCHECKBOX    "Use &ftor", chx2, 111, 64, 40, 14, WS_TABSTOP
+
+    GROUPBOX        "Surface",IDC_STATIC,7,96,353,68
+    GROUPBOX        "Cell life times",IDC_STATIC,16,108,339,33
+    LTEXT           "Without molecule:",IDC_STATIC,24,124,67,8
+    EDITTEXT        IDC_TIME1,91,121,19,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,109,121,10,14,WS_EX_STATICEDGE
+    LTEXT           "With molecule:",IDC_STATIC,127,123,63,8
+    EDITTEXT        IDC_TIME2,191,120,18,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SPIN2,"msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,208,120,10,14,WS_EX_STATICEDGE
+    LTEXT           "With charged molecule:",IDC_STATIC,229,123,88,8
+    EDITTEXT        IDC_TIME3,319,120,18,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SPIN3,"msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,336,120,10,14,WS_EX_STATICEDGE
+    LTEXT           "Oxidize probability:",IDC_STATIC,17,148,62,8
+    EDITTEXT        IDC_OXID_PROB,91,145,40,14,ES_AUTOHSCROLL
+
+    DEFPUSHBUTTON   "Apply",IDOK,251,173,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,310,173,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_CELLULAR            ICON                    "Cellular.ico"
+IDI_SMALL               ICON                    "small.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_CELLULAR MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Save",                       IDM_SAVE
+        MENUITEM "&Load",                       IDM_LOAD
+        MENUITEM "Load 2D-fractal",             IDM_LOAD_FRACTAL
+        MENUITEM "Save Z-&distribution",        IDM_SAVE_DISTR
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Action"
+    BEGIN
+        MENUITEM "Reset",                       IDM_RESET
+        MENUITEM "&Pause",                      IDM_PAUSE
+    END
+    POPUP "&Mode"
+    BEGIN
+        MENUITEM "&1. Surface",                 IDM_VIEW_SURFACE
+        MENUITEM "&2. Horizontal slit",         IDM_VIEW_HORZ_SLIT
+        MENUITEM "&3. Vertical slit",           IDM_VIEW_VERT_SLIT
+        MENUITEM "&4. 3D - Mode",               IDM_VIEW_3D
+        MENUITEM "&5. 3D - OpenGL Mode",        IDM_VIEW_3D_OPENGL
+        MENUITEM "&6  Dimension plots",         IDM_VIEW_DIMENSION
+        MENUITEM "&7  Property plots",          IDM_VIEW_PROPERTY
+        MENUITEM "&8. Results",                 IDM_VIEW_RESULTS
+        MENUITEM "&9. Voltage-current characteristic", IDM_VIEW_VAH
+        MENUITEM "&0. Distributions",           IDM_VIEW_DISTR
+    END
+    POPUP "&Display"
+    BEGIN
+        MENUITEM "Auto &rotation",              IDM_VIEW_AUTO_ROTATION
+        MENUITEM "Show &bounds",                IDM_VIEW_SHOW_BOUNDS
+        MENUITEM "Show shado&w",                IDM_VIEW_SHOW_SHADOW
+        MENUITEM "Change colors",               IDM_VIEW_CHANGE_COLORS
+    END
+    POPUP "&Options"
+    BEGIN
+        POPUP "Electromagnetic &field"
+        BEGIN
+            MENUITEM "1. No field",                 IDM_VIEW_NO_FIELD
+            MENUITEM "2. Show &overall field",      IDM_VIEW_OVERALL_FIELD
+            //MENUITEM "3. Show &pore field",         IDM_VIEW_PORE_FIELD
+            //MENUITEM "4. Split field on &two components", IDM_VIEW_TWO_COMPONENTS
+        END
+        MENUITEM "Show &equipotential curves",  IDM_VIEW_SHOW_EQU_CURVES
+        MENUITEM SEPARATOR
+        MENUITEM "Show o&xid",                  IDM_VIEW_SHOW_OXID
+        MENUITEM SEPARATOR
+        MENUITEM "Show pore &tips",             IDM_VIEW_SHOW_TIPS
+        MENUITEM "Show pore &cloud",            IDM_VIEW_SHOW_PORE_CLOUD
+        MENUITEM "Show &holes",                 IDM_VIEW_SHOW_HOLES
+        MENUITEM "Show twin holes only",        IDM_VIEW_SHOW_TWIN_HOLES_ONLY
+        MENUITEM "Show F&tor",                  IDM_VIEW_SHOW_FTOR
+        MENUITEM "Tr&ansparency",               IDM_VIEW_TRANSPARENT
+        MENUITEM SEPARATOR       
+        MENUITEM "Show average pore depth"      IDM_AVERAGE_DEPTH
+        MENUITEM "Show concentration of pores"  IDM_PORE_CONCENTRATION
+        MENUITEM "Show pore cluster area"       IDM_PORE_AREA
+        MENUITEM "Show pore cluster volume"     IDM_PORE_VOLUME
+        MENUITEM "Show cluster porosity"        IDM_PORE_POROSITY
+        MENUITEM "Show all properties together" IDM_ALL_PROPERTIES
+        MENUITEM SEPARATOR       
+        MENUITEM "Show fractal dimension only"      IDM_FRACTAL_DIM_ONLY
+        MENUITEM "Show correlation dimension only"  IDM_CORRELATION_DIM_ONLY
+        MENUITEM "Show mass fractal dimension only" IDM_MASS_DIM_ONLY
+        MENUITEM "Show all dimensions together"     IDM_ALL_DIMENSIONS
+        MENUITEM "Show dimension plot/line"         IDM_SHOW_DIM_PLOT
+        MENUITEM "Calc slit dimension"              IDM_CALC_SLIT_DIMENSION
+    END
+    MENUITEM "&Setup",                      IDM_PARAMS
+    MENUITEM "&About",                      IDM_ABOUT
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_CELLULAR ACCELERATORS 
+BEGIN
+    VK_F2,          IDM_EXIT,               VIRTKEY, NOINVERT
+    "?",            IDM_ABOUT,              ASCII,  ALT, NOINVERT
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 162
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_PARAMS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 360
+        TOPMARGIN, 9
+        BOTTOMMARGIN, 167
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "Cellular"
+    IDC_CELLULAR            "CELLULAR"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
